@@ -1,3 +1,4 @@
+/* Reset */
 /* Box sizing rules */
 *,
 *::before,
@@ -27,8 +28,8 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul[role=list],
+ol[role=list] {
   list-style: none;
 }
 
@@ -59,7 +60,8 @@ h4 {
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
-  text-decoration-skip-ink: auto;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
   color: currentColor;
 }
 
@@ -87,3 +89,8 @@ textarea:not([rows]) {
 :target {
   scroll-margin-block: 5ex;
 }
+
+h1 {
+  color: rgb(153, 60, 60);
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */

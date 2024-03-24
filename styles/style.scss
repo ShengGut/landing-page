@@ -1,0 +1,8 @@
+@import './reset';
+
+$primary-clr-400: rgb(153, 60, 60);
+
+h1 {
+  color: $primary-clr-400;
+  text-align: center;
+}
