@@ -1,6 +1,13 @@
 @import './reset';
 
-$primary-clr-400: rgb(153, 60, 60);
+$clr-accent-500: hsl(12, 60%, 45%);
+$clr-accent-400: hsl(12, 88%, 59%);
+$clr-accent-300: hsl(12, 88%, 75%);
+$clr-accent-100: hsl(13, 100%, 96%);
+
+$clr-primary-400: hsl(228, 39%, 23%);
+$clr-neutral-900: hsl(232, 12%, 13%);
+$clr-neutral-100: hsl(0 0% 100%);
 
 h1 {
   color: $primary-clr-400;
