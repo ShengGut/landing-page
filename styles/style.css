@@ -67,7 +67,8 @@ a:not([class]) {
 
 /* Make images easier to work with */
 img,
-picture {
+picture,
+svg {
   max-width: 100%;
   display: block;
 }
@@ -92,6 +93,7 @@ textarea:not([rows]) {
 
 body {
   font-family: "Roboto", sans-serif;
+  font-size: 1.1rem;
 }
 
 .nav-list {
@@ -110,20 +112,15 @@ body {
   height: 300px;
 }
 
-.header-img {
-  width: auto;
-  height: auto;
-  aspect-ratio: 2/3;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: right;
-     object-position: right;
-  justify-self: end;
-  align-self: end;
+/* utility classes */
+.container {
+  width: min(1110px, 100% - 2rem);
+  margin-inline: auto;
 }
 
 .even-columns {
   display: grid;
+  gap: 1rem;
 }
 
 @media (min-width: 50em) {
@@ -145,6 +142,73 @@ body {
 }
 
 /* header */
+.header-img {
+  width: auto;
+  height: auto;
+  aspect-ratio: 2/3;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: right;
+     object-position: right;
+  justify-self: end;
+  align-self: end;
+}
+
+.primary-header {
+  margin: -1rem;
+  background: linear-gradient(135deg, rgb(8, 145, 178) 90%, white 69%);
+}
+
 .about-me {
   margin: 1rem;
+}
+
+.primary-header .container > * {
+  border: 2px solid lime;
+}
+
+/* main */
+.triple-columns {
+  display: grid;
+  border: 2px solid blue;
+}
+
+@media (min-width: 50em) {
+  .triple-columns {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+}
+.card {
+  border: 2px dotted red;
+}
+
+/* footer */
+.primary-footer {
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
+  margin: -1rem;
+  background: rgb(8, 145, 178);
+}
+
+.footer-img {
+  aspect-ratio: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 500px;
+  height: auto;
+}
+
+.primary-footer .even-columns > * {
+  border: 2px solid red;
+}
+
+.footer-div {
+  justify-self: start;
+  margin-left: 2rem;
+}
+
+.contact-me {
+  justify-self: start;
+  padding: 24px;
 }/*# sourceMappingURL=style.css.map */

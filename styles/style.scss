@@ -5,7 +5,7 @@ $clr-accent-400: hsl(12, 88%, 59%);
 $clr-accent-300: hsl(12, 88%, 75%);
 $clr-accent-100: hsl(13, 100%, 96%);
 
-$clr-primary-400: hsl(228, 39%, 23%);
+$clr-primary-400: rgb(8, 145, 178);
 
 $clr-neutral-900: hsl(232, 12%, 13%);
 $clr-neutral-100: hsl(0 0% 100%);
@@ -24,11 +24,11 @@ $fs-300: 0.8125rem;
 $fs-400: 0.875rem;
 $fs-500: 0.9375rem;
 $fs-600: 1rem;
-$fs-700: 1.875rem;
+$fs-700: 1.1rem;
 $fs-800: 2.5rem;
 $fs-900: 3.5rem;
 
-$fs-body: $fs-400;
+$fs-body: $fs-700;
 $fs-primary-heading: $fs-800;
 $fs-secondary-heading: $fs-700;
 $fs-nav: $fs-500;
@@ -54,6 +54,7 @@ $size-900: 5rem;
 
 body {
   font-family: $ff-body;
+  font-size: $fs-body;
 }
 
 .nav-list {
@@ -72,18 +73,18 @@ body {
   height: 300px;
 }
 
-.header-img {
-  width: auto;
-  height: auto;
-  aspect-ratio: 2 / 3;
-  object-fit: cover;
-  object-position: right;
-  justify-self: end;
-  align-self: end;
+/* utility classes */
+
+.container {
+  $max-width: 1110px;
+  $padding: 1rem;
+  width: min($max-width, 100% - ($padding) * 2);
+  margin-inline: auto;
 }
 
 .even-columns {
   display: grid;
+  gap: 1rem;
 }
 
 @media (min-width: 50em) {
@@ -107,6 +108,73 @@ body {
 
 /* header */
 
+.header-img {
+  width: auto;
+  height: auto;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  object-position: right;
+  justify-self: end;
+  align-self: end;
+}
+
+.primary-header {
+  margin: -1rem;
+  background: linear-gradient(135deg, $clr-primary-400 90%, white 69%);
+}
+
 .about-me {
   margin: 1rem;
+}
+
+.primary-header .container > * {
+  border: 2px solid lime;
+}
+
+/* main */
+
+.triple-columns {
+  display: grid;
+  border: 2px solid blue;
+}
+
+@media (min-width: 50em) {
+  .triple-columns {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+}
+
+.card {
+  border: 2px dotted red;
+}
+
+/* footer */
+
+.primary-footer {
+  padding-top: $size-500;
+  padding-bottom: $size-600;
+  margin: -1rem;
+  background: $clr-primary-400;
+}
+
+.footer-img {
+  aspect-ratio: 1;
+  object-fit: cover;
+  max-width: 500px;
+  height: auto;
+}
+
+.primary-footer .even-columns > * {
+  border: 2px solid red;
+}
+
+.footer-div {
+  justify-self: start;
+  margin-left: 2rem;
+}
+
+.contact-me {
+  justify-self: start;
+  padding: 24px;
 }
