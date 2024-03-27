@@ -138,4 +138,13 @@ body {
 
 .padding-block-700 {
   padding-block: 3rem;
+}
+
+.margin-400 {
+  margin: 0 3rem 0 3rem;
+}
+
+/* header */
+.about-me {
+  margin: 1rem;
 }/*# sourceMappingURL=style.css.map */

@@ -96,6 +96,17 @@ body {
 .padding-block-900 {
   padding-block: $size-900;
 }
+
 .padding-block-700 {
   padding-block: $size-700;
+}
+
+.margin-400 {
+  margin: 0 $size-700 0 $size-700;
+}
+
+/* header */
+
+.about-me {
+  margin: 1rem;
 }
