@@ -13,8 +13,8 @@ $clr-neutral-100: hsl(0 0% 100%);
 $ff-primary: 'Playfair Display', serif;
 $ff-secondary: 'Roboto', sans-serif;
 
-$ff-heading: $ff-primary;
-$ff-body: $ff-secondary;
+$ff-heading: $ff-secondary;
+$ff-body: $ff-primary;
 
 $fw-regular: 400;
 $fw-semi-bold: 500;
@@ -57,6 +57,10 @@ body {
   font-size: $fs-body;
 }
 
+.primary-footer {
+  color: $clr-accent-100;
+}
+
 .nav-list {
   display: flex;
   gap: $size-200;
@@ -72,6 +76,15 @@ body {
   width: 200px;
   height: 300px;
   justify-self: end;
+}
+
+.fs-primary-heading {
+  font-size: $fs-primary-heading;
+  line-height: 1.1;
+}
+.fs-secondary-heading {
+  font-size: $fs-secondary-heading;
+  line-height: 1.1;
 }
 
 /* utility classes */

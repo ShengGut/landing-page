@@ -92,8 +92,12 @@ textarea:not([rows]) {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Playfair Display", serif;
   font-size: 1.1rem;
+}
+
+.primary-footer {
+  color: hsl(13, 100%, 96%);
 }
 
 .nav-list {
@@ -111,6 +115,16 @@ body {
   width: 200px;
   height: 300px;
   justify-self: end;
+}
+
+.fs-primary-heading {
+  font-size: 2.5rem;
+  line-height: 1.1;
+}
+
+.fs-secondary-heading {
+  font-size: 1.1rem;
+  line-height: 1.1;
 }
 
 /* utility classes */
